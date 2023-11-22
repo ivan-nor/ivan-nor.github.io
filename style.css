@@ -1,17 +1,17 @@
 @font-face {
-	font-family: 'Montserrat';
-	src: url(/fonts/Montserrat/Montserrat-Regular.ttf); 
+  font-family: 'Montserrat';
+  src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
 @font-face {
-	font-family: 'Inter';
-	src: url(/fonts/Inter/Inter-Regular.otf);
+  font-family: 'Inter';
+  src: url(/fonts/Inter/Inter-Regular.otf);
 }
 
 body {
   margin: 0;
   /* font-family: 'Arial', sans-serif; */
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   background: #0e1014;
 }
 
@@ -26,6 +26,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+  /* Произвольный отступ для примера, вы можете настроить по своему усмотрению */
 }
 
 .logo {
@@ -34,6 +36,9 @@ header {
   color: #333;
   gap: 10px;
   height: 24px;
+  display: flex;
+  align-items: start;
+
 }
 
 .part-2 {
@@ -41,6 +46,7 @@ header {
   height: 15px;
   background-image: url(part2.svg);
 }
+
 .part-1 {
   width: 35px;
   height: 24px;
@@ -49,14 +55,11 @@ header {
 
 .logo-title {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   gap: 10px;
 }
 
 .logo-description {
-  text-align: left;
-  /* font: 300 10px "Montserrat-Light", sans-serif; */
-  /* width: 165px; */
   color: #E4E5EA;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
@@ -74,28 +77,27 @@ nav {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  width: 100%;
+  justify-content: space-between;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
+  gap: 20px;
   color: #E4E5EA;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: 0;
+  padding: 0;
 }
 
-nav li {
-  margin-right: 15px;
-}
 
 nav a {
   text-decoration: none;
-}
-
-a {
   color: #E4E5EA;
 }
 
@@ -103,10 +105,12 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .main-text {
   max-width: 360px;
+  font-family: 'Inter', sans-serif;
 }
 
 .sub-text {
@@ -117,13 +121,17 @@ a {
   font-weight: 900;
   line-height: normal;
 }
+
 h1 {
   color: #E4E5EA;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
- }
+  font-family: 'Inter', sans-serif;
+  margin-block: 0;
+}
+
 .extra-text {
   color: var(--light-text, #E4E5EA);
   font-family: 'Montserrat', sans-serif;
@@ -136,13 +144,15 @@ h1 {
 .features {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: end;
   max-width: 300px;
   color: #E4E5EA;
+  gap: 10px;
 }
 
 .feature {
-  width: 48%; /* Ширина элемента в каждой колонке */
+  width: 48%;
+  /* Ширина элемента в каждой колонке */
   margin-bottom: 10px;
   text-align: right;
 }
@@ -171,6 +181,8 @@ h1 {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  height: 60px;
+  width: 260px;
 }
 
 /* FOOTER */
@@ -178,10 +190,10 @@ h1 {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding-top: 40px;
   background-color: #0e1014;
   color: #E4E5EA;
-  height: 315px;
+  /* height: 315px; */
   gap: 30px;
 }
 
@@ -198,7 +210,7 @@ h1 {
 }
 
 .footer-links li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
@@ -218,7 +230,7 @@ h1 {
 
 .footer .menu-list {
   column-count: 2;
-  display:block;
+  display: block;
 }
 
 .red-light {
@@ -232,6 +244,7 @@ h1 {
   top: 251px;
   filter: blur(196px);
 }
+
 .purple-light {
   background: #833ab4;
   border-radius: 50%;
@@ -243,32 +256,24 @@ h1 {
   top: -154px;
   filter: blur(196px);
 }
+
 .red-ball {
-  background: radial-gradient(
-    closest-side,
-    rgba(255, 208, 208, 0.48) 0%,
-    rgba(212, 93, 93, 0.25) 59.667813777923584%,
-    rgba(167, 49, 49, 0.26) 78.58988642692566%,
-    rgba(130, 25, 25, 0.23) 100%
-  );
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
   border-radius: 50%;
   width: 28px;
   height: 28px;
-  position: relative;
+  position: absolute;
   left: 851px;
   top: 547px;
   box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
   filter: blur(2.5px);
   backdrop-filter: blur(2px);
 }
+
 .red-ball2 {
-  background: radial-gradient(
-    closest-side,
-    rgba(255, 208, 208, 0.54) 0%,
-    rgba(212, 93, 93, 0.26) 59.667813777923584%,
-    rgba(167, 49, 49, 0.25) 78.58988642692566%,
-    rgba(130, 25, 25, 0.25) 100%
-  );
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
   border-radius: 50%;
   width: 83px;
   height: 83px;
@@ -278,14 +283,21 @@ h1 {
   box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
   /* backdrop-filter: blur(2px); */
 }
+
 .purple-ball {
-  background: radial-gradient(
+  /* background: radial-gradient(
     closest-side,
     rgba(236, 208, 255, 0.64) 0%,
     rgba(161, 93, 207, 0.24) 59.667813777923584%,
     rgba(118, 49, 164, 0.21) 78.58988642692566%,
     rgba(86, 24, 128, 0.23) 100%
-  );
+  ); */
+
+  background: radial-gradient(
+    64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%)
+
+  ;
+
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -302,11 +314,13 @@ h1 {
   height: 20px;
   background-image: url(whatsapp.svg);
 }
+
 .telegram {
   width: 20px;
   height: 20px;
   background-image: url(telegram.svg);
 }
+
 .viber {
   width: 20px;
   height: 20px;
@@ -314,8 +328,10 @@ h1 {
 }
 
 nav ul li svg {
-  display: block; /* Изменение свойства на block */
-  margin: auto;   /* Добавление стиля margin: auto; */
+  display: block;
+  /* Изменение свойства на block */
+  margin: auto;
+  /* Добавление стиля margin: auto; */
 }
 
 strong {
@@ -324,10 +340,27 @@ strong {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.9px;
   text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.copyright {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #E4E5EA;
+  align-items: flex-end;
+}
+
+.copyright a {
+  text-decoration: underline;
+  color: #E4E5EA;
 }
