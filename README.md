@@ -1,1 +1,1 @@
-# [ссылка на деплой](ivan-nor.github.io)
+# [ссылка на деплой](https://ivan-nor.github.io)
