@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Monserrat';
+  src: url(./fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(./fonts/Inter/Inter-Regular.otf);
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
